@@ -13,6 +13,8 @@ stage('Build') {
 steps {
 withEnv ( ['JENKINS_NODE_COOKIE=do_not_kill'] )
 {
+bat 'mvn --version'
+bat 'java --version'
 bat 'mvn clean install'
 }
 }

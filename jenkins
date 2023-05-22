@@ -21,11 +21,10 @@ bat 'mvn clean install'
 }
 
 
-stage('Run') {
+stage('Deploy') {
 steps {
-withEnv ( ['JENKINS_NODE_COOKIE=do_not_kill'] )
 {
-bat 'java -jar target/spring-0.0.1-SNAPSHOT.jar'
+bat 'scp target/spring-0.0.1-SNAPSHOT.jar mint@10.4.23.50:/home/mint'
 }
 }
 }

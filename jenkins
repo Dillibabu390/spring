@@ -13,7 +13,6 @@ stage('Build') {
 steps {
 withEnv ( ['JENKINS_NODE_COOKIE=do_not_kill'] )
 {
-bat 'cd spring'
 bat 'mvn clean install'
 }
 }

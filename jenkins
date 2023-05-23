@@ -23,9 +23,9 @@ bat 'mvn clean install'
 
 stage('Deploy') {
 steps {
-{
+
 bat 'scp ./target/spring-0.0.1-SNAPSHOT.jar mint@10.4.23.50:/home/mint'
-}
+
 }
 }
 

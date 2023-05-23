@@ -24,7 +24,7 @@ bat 'mvn clean install'
 stage('Deploy') {
 steps {
 
-bat 'sshpass -p asdfghjkl scp ./target/spring-0.0.1-SNAPSHOT.jar mint@10.4.23.50:/home/mint'
+bat 'pscp -pw asdfghjkl ./target/spring-0.0.1-SNAPSHOT.jar mint@10.4.23.50:/home/mint'
 
 }
 }
